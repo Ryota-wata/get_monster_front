@@ -47,3 +47,95 @@ button {
   padding: 0.5rem 1rem;
   font-weight: bold;
 }
+
+.ball {
+  /* ボールの初期位置とサイズを設定 */
+  position: absolute;
+  bottom: 200%;
+  left: 20%;
+}
+
+.throw-ball {
+  /* アニメーションの設定 */
+  animation: throwBall 1s linear;
+}
+
+@keyframes throwBall {
+  0% {
+    /* アニメーション開始時のボールの位置 */
+    bottom: 200%;
+    left: 20%;
+  }
+  
+  100% {
+    /* アニメーション終了時のボールの位置（モンスターの位置に合わせて調整） */
+    bottom: 700px;
+    left: 80%;
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.monster img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.human img {
+  position: absolute;
+  bottom: 250px;
+  left: 0;
+}
+
+.button-box {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: double;
+  padding: 10px;
+  width: 80%;
+  display: flex;
+}
+
+
+.a-button {
+  background-color: gray;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 50%; /* 角を丸くするために50%を指定 */
+  width: 50px; /* ボタンの幅を設定（適宜調整） */
+  height: 50px; /* ボタンの高さを設定（適宜調整） */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a-button:hover {
+  background-color: darkred;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row; /* 要素を横に配置 */
+  align-items: center; /* 要素を縦方向に中央寄せ */
+  gap: 10px; /* ボタン間の間隔を調整 */
+}
+
+.arrow-keys {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arrow-row {
+  display: flex;
+  gap: 0px;
+  margin-top: 0px;
+}
