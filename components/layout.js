@@ -17,6 +17,7 @@ export default function Layout(props){
       <div>
         <h5 className='my-custom-class'>
           Aボタンを連打すればなぜかモンスターが捕まりやすくなると思っていたあの頃を思い出そう。
+          (※注)PCでしか遊べません。
         </h5>
         <Link href="/pika">
           <button className='bg-blue-500 text-white p-4'>
